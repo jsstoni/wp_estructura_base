@@ -9,3 +9,10 @@
 * License: GPLv2
 * Text Domain: pluginName
 */
+
+define('PATH_PLUGIN', plugin_dir_path(__FILE__));
+define('DIR_URL', plugin_dir_url(__FILE__));
+if (is_admin() || (defined( 'WP_CLI' ) && WP_CLI)) {
+	require_once( PATH_PLUGIN . 'includes/pluginName.class.php' );
+	$app = new pluginName();
+}
