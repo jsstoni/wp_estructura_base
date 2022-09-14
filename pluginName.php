@@ -9,6 +9,9 @@
 * License: GPLv2
 * Text Domain: pluginName
 */
+if ( ! defined( 'ABSPATH' ) ) {
+	die();
+}
 
 define('PATH_PLUGIN', plugin_dir_path(__FILE__));
 define('DIR_URL', plugin_dir_url(__FILE__));
